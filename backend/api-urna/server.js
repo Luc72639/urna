@@ -1,7 +1,7 @@
 const { express, app, port, status500, status200 } = require("./constantes");
 const { conexao } = require("./banco");
 app.get("/", (req, res) => {
-    return res.status(200).json({ message: "API da Urna Eletrônica" });
+    return res.status(200).json({ message: "API da Urna Eletrônica funcionando!" });
 });
 app.get("/partidos", (req, res) => {
   const query = 'SELECT * FROM partidos';

@@ -1,9 +1,9 @@
 {
   "name": "api-urna",
   "version": "1.0.0",
-  "main": "sever.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node sever.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",

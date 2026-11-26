@@ -8,8 +8,8 @@ const port = 3000;
 app.use(express.json());
 app.use(cors());
 
-const status500 = "Erro ao conectar ao banco de dados";
-const status200 = "Conexão com o banco de dados bem-sucedida";
+const status500 = "Erro ao conectar ao banco de dados da urna";
+const status200 = "Conexão com o banco de dados da urna bem-sucedida";
 
 
 module.exports = { express, mySql, app, port, status500, status200, cors };

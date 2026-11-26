@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="urna">
+
+        <div class="tela" id="tela">
+            
+            
+            <div id="tela-votacao" class="tela-votacao">
+                <h1>JUSTIÇA ELEITORAL</h1>
+
+                <div class="conteudo">
+                    <div>
+                        <p>SEU VOTO PARA:</p>
+                        <h2>PRESIDENTE</h2>
+
+                        <p>NÚMERO:</p>
+                        <div class="numero">
+                            <div id="digito-1"></div>
+                            <div id="digito-2"></div>
+                        </div>
+
+                        <div id="info-candidato" class="oculto">
+                            <p>NOME: <strong id="nome-candidato"></strong></p>
+                            <p>PARTIDO: <strong id="partido-candidato"></strong></p>
+                            <p>VICE-PRESIDENTE: <strong id="vice-candidato"></strong></p>
+                        </div>
+
+                        <div id="aviso-tela" class="aviso-tela"></div>
+                    </div>
+
+                    <div class="fotos oculto" id="bloco-fotos">
+                        <div class="foto" id="foto-presidente">FOTO</div>
+                        <strong>PRESIDENTE</strong>
+                        <div class="foto menor" id="foto-vice">FOTO</div>
+                        <strong>VICE-PRESIDENTE</strong>
+                    </div>
+                </div>
+
+                <div class="mensagem" id="rodape-tela">
+                    Aperte a tecla:<br>
+                    <strong>CONFIRMA</strong> para confirmar seu voto<br>
+                    <strong>CORRIGE</strong> para reiniciar este voto
+                </div>
+            </div>
+
+            <div id="tela-fim" class="tela-fim oculto">
+                <div class="fim">FIM</div>
+                <div class="votou">VOTOU</div>
+            </div>
+
+        </div>
+
+        <div class="painel-direito">
+            <div class="cabecalho-urna">
+                <span>JUSTIÇA ELEITORAL</span>
+            </div>
+
+            <div class="teclado">
+                <div class="numeros">
+                    <button data-numero="1">1</button>
+                    <button data-numero="2">2</button>
+                    <button data-numero="3">3</button>
+                    <button data-numero="4">4</button>
+                    <button data-numero="5">5</button>
+                    <button data-numero="6">6</button>
+                    <button data-numero="7">7</button>
+                    <button data-numero="8">8</button>
+                    <button data-numero="9">9</button>
+                    <button class="zero" data-numero="0">0</button>
+                </div>
+
+                <div class="acoes">
+                    <button class="branco" id="btn-branco">BRANCO</button>
+                    <button class="corrige" id="btn-corrige">CORRIGE</button>
+                    <button class="confirma" id="btn-confirma">CONFIRMA</button>
+                </div>
+            </div>
+
+            <a href="apuracao.html" class="link-apuracao">Ir para Apuração →</a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

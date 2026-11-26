@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuração dos Votos</title>
+    <link rel="stylesheet" href="apuracao.css">
+</head>
+<body>
+
+    <header>
+        <h1>APURAÇÃO ELEITORAL</h1>
+        <p>Resultado da eleição para Presidente</p>
+        <a href="index.html" class="btn-voltar">← Voltar para a Urna</a>
+    </header>
+
+    <main>
+
+        <section class="resumo">
+            <div class="card">
+                <h2>Total de votos</h2>
+                <p id="total-votos">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Votos válidos</h2>
+                <p id="votos-validos">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Votos em branco</h2>
+                <p id="votos-brancos">0</p>
+            </div>
+
+            <div class="card">
+                <h2>Votos nulos</h2>
+                <p id="votos-nulos">0</p>
+            </div>
+        </section>
+
+        <section class="resultado">
+            <h2>RESULTADO DOS CANDIDATOS</h2>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-77">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Bernardo Luz</h3>
+                        <span class="partido">PCR - Número 77</span>
+                    </div>
+                    <p class="vice">Vice: <strong>João Demeneghi</strong></p>
+                    <p class="nome-partido">Partido Consciência de Rua</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-77"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-77">0</strong> votos — 
+                        <strong id="porcentagem-candidato-77">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-2">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Bernardo Girardi Frigeri</h3>
+                        <span class="partido">PNV - Número 50</span>
+                    </div>
+                    <p class="vice">Vice: <strong>Lorenzo de Barros</strong></p>
+                    <p class="nome-partido">Partido Nova Visão</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-2"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-2">0</strong> votos — 
+                        <strong id="porcentagem-candidato-2">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-3">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Emanuelli Rodrigues Britz</h3>
+                        <span class="partido">PJI - Número 35</span>
+                    </div>
+                    <p class="vice">Vice: <strong>Lucas Machado</strong></p>
+                    <p class="nome-partido">Partido Jovem inovador</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-3"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-3">0</strong> votos — 
+                        <strong id="porcentagem-candidato-3">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-4">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Theresa Venzon Mello</h3>
+                        <span class="partido">PCN - Número 54</span>
+                    </div>
+                    <p class="vice">Vice: <strong>Eduardo Dobler</strong></p>
+                    <p class="nome-partido">Partido Caminho Novo</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-4"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-4">0</strong> votos — 
+                        <strong id="porcentagem-candidato-4">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-5">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Felipe Lopes</h3>
+                        <span class="partido">PLT - Número 59</span>
+                    </div>
+                    <p class="vice">Vice: <strong>João Hollas</strong></p>
+                    <p class="nome-partido">Partido Liberal Trabalhista</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-5"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-5">0</strong> votos — 
+                        <strong id="porcentagem-candidato-5">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div class="candidato">
+                <div class="foto" id="foto-candidato-6">FOTO</div>
+                <div class="informacoes">
+                    <div class="topo-candidato">
+                        <h3>Lucas Lazzari</h3>
+                        <span class="partido">PBC - Número 36</span>
+                    </div>
+                    <p class="vice">Vice: <strong>João Paulo</strong></p>
+                    <p class="nome-partido">Partido Brasil em Construção</p>
+                    <div class="barra">
+                        <div class="progresso" id="barra-candidato-6"></div>
+                    </div>
+                    <p class="dados-voto">
+                        <strong id="votos-candidato-6">0</strong> votos — 
+                        <strong id="porcentagem-candidato-6">0%</strong>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Projeto de simulação eleitoral</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

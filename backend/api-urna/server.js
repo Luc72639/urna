@@ -1,11 +1,11 @@
-const { express, mySql, app, port, status500, status200 } = require("./constantes");
+const { express, app, port, status500, status200 } = require("./constantes");
 const { conexao } = require("./banco");
 app.get("/", (req, res) => {
     return res.status(200).json({ message: "API da Urna Eletrônica" });
 });
 app.get("/partidos", (req, res) => {
   const query = 'SELECT * FROM partidos';
-  conexao.query(query, (err, results) => {
+  conexao.query(sql, (err, results) => {
     if(err) {
       console.log(status500);
       return res.status(500).json({ error: 'Erro ao buscar partidos' });
@@ -17,7 +17,7 @@ app.get("/partidos", (req, res) => {
 app.get("/partidos/:id", (req, res) => {
     const partidoId = req.params.id;
     const query = 'SELECT * FROM partidos WHERE id = ?';
-    conexao.query(query, [partidoId], (err, results) => {
+    conexao.query(sql, [partidoId], (err, results) => {
       if(err) {
         console.log(status500);
         return res.status(500).json({ error: 'Erro ao buscar partido' });
@@ -28,7 +28,7 @@ app.get("/partidos/:id", (req, res) => {
 });
 app.get("/chapas", (req, res) => {
     const query = 'SELECT * FROM chapas';
-    conexao.query(query, (err, results) => {
+    conexao.query(sql, (err, results) => {
       if(err) {
         console.log(status500);
         return res.status(500).json({ error: 'Erro ao buscar chapas' });
@@ -40,7 +40,7 @@ app.get("/chapas", (req, res) => {
 app.get("/chapas/:id", (req, res) => {
     const chapaId = req.params.id;
     const query = 'SELECT * FROM chapas WHERE id = ?';
-    conexao.query(query, [chapaId], (err, results) => {
+    conexao.query(sql, [chapaId], (err, results) => {
       if(err) {
         console.log(status500);
         return res.status(500).json({ error: 'Erro ao buscar chapa' });
@@ -51,7 +51,7 @@ app.get("/chapas/:id", (req, res) => {
 });
 app.get("/votos", (req, res) => {
   const query = 'SELECT * FROM votos';
-    conexao.query(query, (err, results) => {
+    conexao.query(sql, (err, results) => {
         if(err) {
             console.log(status500);
             return res.status(500).json({ error: 'Erro ao buscar votos' });
@@ -63,7 +63,7 @@ app.get("/votos", (req, res) => {
 app.get("/votos/:id", (req, res) => {
     const votoId = req.params.id;
     const query = 'SELECT * FROM votos WHERE id = ?';   
-    conexao.query(query, [votoId], (err, results) => {
+    conexao.query(sql, [votoId], (err, results) => {
         if(err) {
             console.log(status500);
             return res.status(500).json({ error: 'Erro ao buscar voto' });

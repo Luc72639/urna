@@ -8,7 +8,7 @@ app.get("/partidos", (req, res) => {
   conexao.query(query, (err, results) => {
     if(err) {
       console.log(status500);
-      return res.status(500).json({ error: 'Erro ao buscar partidos' });
+      return res.status(500).json({ error: 'Erro ao buscar partido!' });
     }
     console.log(status200);
     return res.status(200).json(results);
@@ -20,7 +20,7 @@ app.get("/partidos/:id", (req, res) => {
     conexao.query(query, [partidoId], (err, results) => {
       if(err) {
         console.log(status500);
-        return res.status(500).json({ error: 'Erro ao buscar partido' });
+        return res.status(500).json({ error: 'Erro ao buscar partido!' });
       }
       console.log(status200);
       return res.status(200).json(results);
@@ -31,7 +31,7 @@ app.get("/chapas", (req, res) => {
     conexao.query(query, (err, results) => {
       if(err) {
         console.log(status500);
-        return res.status(500).json({ error: 'Erro ao buscar chapas' });
+        return res.status(500).json({ error: 'Erro ao buscar chapas!' });
       }
       console.log(status200);
       return res.status(200).json(results);
@@ -43,7 +43,7 @@ app.get("/chapas/:id", (req, res) => {
     conexao.query(query, [chapaId], (err, results) => {
       if(err) {
         console.log(status500);
-        return res.status(500).json({ error: 'Erro ao buscar chapa' });
+        return res.status(500).json({ error: 'Erro ao buscar chapa!' });
       }
       console.log(status200);
       return res.status(200).json(results);
@@ -54,7 +54,7 @@ app.get("/votos", (req, res) => {
     conexao.query(query, (err, results) => {
         if(err) {
             console.log(status500);
-            return res.status(500).json({ error: 'Erro ao buscar votos' });
+            return res.status(500).json({ error: 'Erro ao buscar votos!' });
         }
         console.log(status200);
         return res.status(200).json(results);
@@ -66,7 +66,7 @@ app.get("/votos/:id", (req, res) => {
     conexao.query(query, [votoId], (err, results) => {
         if(err) {
             console.log(status500);
-            return res.status(500).json({ error: 'Erro ao buscar voto' });
+            return res.status(500).json({ error: 'Erro ao buscar voto!' });
         }
         console.log(status200);
         return res.status(200).json(results);
